@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gesfin</title>
+  <link rel="stylesheet" href="/vendor/bootstrap-5.3.3-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/wallet.css">
+</head>
+<body class="d-flex flex-column h-100">
+  <header>
+    <div class="px-3 py-2 text-bg-dark border-bottom">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <svg class="bi me-2" width="50" height="50" role="img" aria-label="Bootstrap"><use xlink:href="/assets/icons.svg#gesfin50-white"></use></svg>
+          </a>
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <a href="/" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="/assets/icons.svg#home"></use></svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/wallets.html" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="/assets/icons.svg#wallet"></use></svg>
+                Carteras
+              </a>
+            </li>
+            <li>
+              <a href="/profile.html" class="nav-link text-white">
+                <img src="/img/avatar/rabbit.png" width="24" alt="" class="bi d-block mx-auto mb-1">
+                Sofia
+              </a>
+            </li>
+            <li>
+              <a href="/login.html" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="/assets/icons.svg#login"></use></svg>
+                Iniciar sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container my-3">
+    <div id="title" class="row">
+      <div class="icon-parent icon-orange col-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><use xlink:href="/assets/wallets.svg#cerdito"></use></svg>
+      </div>
+      <div class="col">
+        <div class="d-flex align-items-center">
+          <h1 class="fw-bold m-0 d-flex">Nombre de la cartera</h1>
+          <a class="edit" title="Editar cartera" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><use xlink:href="/assets/wallet.svg#edit"></use></svg>
+          </a>
+          <a class="delete ms-3" title="Borrar cartera" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><use xlink:href="/assets/wallet.svg#trash"></use></svg>
+          </a>
+        </div>
+        <p class=" fs-4 fw-semibold p-0 m-0">10,00 €</p>
+        <div class="text-body-secondary">
+            <span class="text-success"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><use xlink:href="/assets/wallet.svg#arrow-up"></use></svg> 100,00%</span>
+            Último mes <span class="fw-semibold">5,00 €</span>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class=" col-2 d-flex flex-column flex-md-row gap-4 align-items-start justify-content-center">
+          <div class="list-group list-group-checkable d-grid gap-2 border-0">
+              <input class="list-group-item-check pe-none" type="radio" name="wallet-menu" id="first-option" value="" onclick="location.href='/wallet.html'">
+              <label class="list-group-item rounded-3 py-3" for="first-option">
+                Resumen
+                <span class="d-block small opacity-50">Un vistazo general a las estadísticas de la cartera</span>
+              </label>
+
+        
+            <input class="list-group-item-check pe-none" type="radio" name="wallet-menu" id="second-option" value="" onclick="location.href='/transactions.html'">
+            <label class="list-group-item rounded-3 py-3" for="second-option">
+              Transacciones
+              <span class="d-block small opacity-50">Administra las transacciones de la cartera</span>
+            </label>
+          </div>
+      </div>
+      <div id="content" class="col">
+        <div class="row">
+          <div class="col align-items-center justify-content-center ">
+            <h3>Añadir transacción</h3>
+              <form action="#" method="post" name="new-transaction">
+                <div class="row mb-3 justify-content-center">
+                  <div class="col-3">
+                    <label for="type" class="form-label">Tipo</label>
+                    <select name="type" id="type" class="form-control">
+                      <option value="-1">Selecciona un tipo</option>
+                      <option value="1">Ingreso</option>
+                      <option value="0">Gasto</option>
+                    </select>
+                  </div>
+                  <div class="col-4">
+                    <label for="title" class="form-label">Título</label>
+                    <input type="text" name="title" id="title" class="form-control mb-2">
+                  </div>
+                  <div class="col-3">
+                    <label for="amount" class="form-label">Cantidad</label>
+                    <input type="text" name="amount" id="amount" class="form-control mb-2">
+                  </div>
+                </div>
+                <div class="row mb-3 justify-content-center">
+                  <div class="col-5">
+                    <div class="row">
+                      <div class="col">
+                        <label for="icon" class="form-label">Fecha</label>
+                        <!-- En caso de acceder al formulario para editar, se descomenta esto y se borra la siguiente row -->
+                        <!-- <input type="date" name="date" id="date" class="form-control w-50" value=""> -->
+
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="d-inline">
+                          <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="date-selector" id="date-today" value="" checked>
+                          <label class="form-check-label" for="date-today">Hoy</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="date-selector" id="another-date" value="">
+                          <label class="form-check-label" for="another-date">Otra fecha</label>
+                        </div>
+                        </div>
+                        <input type="date" name="date" id="date" class="form-control d-inline w-50" disabled>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <label for="notes" class="form-label">Notas</label>
+                    <textarea name="notes" id="notes" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="row mb-3 justify-content-center">
+                  <div class="col-10">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" name="image" id="image" class="form-control">
+                  </div>
+                </div>
+                <div class="row mt-2 ">
+                  <div class="col-1 offset-10 d-flex">
+                    <button type="submit" class="btn btn-success ms-2">Crear</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg class="bi" width="30" height="30"><use xlink:href="/assets/icons.svg#gesfin50-black"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Gesfín. All rights reserved.</span>
+        </div>
+    
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="/assets/icons.svg#twitter"></use></svg></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="/assets/icons.svg#instagram"></use></svg></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="/assets/icons.svg#facebook"></use></svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="/vendor/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/new-transaction.js"></script>
+</body>
+</html>
