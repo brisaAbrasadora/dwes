@@ -55,12 +55,12 @@
             <p class="card-text fs-3 mb-0 fw-semibold px-3">Sofía</p>
             <p class="card-text small text-secondary px-3">sofia@gmail.com</p>
             <div class="list-group border-0 mb-3">
-              <a href="#" class="list-group-item list-groum-item-action active border-0">
+              <a href="/profile.html" class="list-group-item list-groum-item-action border-0">
                 <div>
                   <h5 class="mb-1">Resumen</h5>
                 </div>
               </a>
-              <a href="/edit-profile.html" class="list-group-item list-groum-item-action border-0">
+              <a href="#" class="list-group-item list-groum-item-action active border-0">
                 <div>
                   <h5 class="mb-1">Editar perfil</h5>
                 </div>
@@ -74,51 +74,60 @@
           </div>
         </div>
       </div>
-      <div class="col-9 p-0">
+      <div id="content" class="col-9">
         <div class="row">
-          <div class="col-6">
-            <div class="card">
-              <div class="card-body">
-                <h6 class="card-title">Dinero total</h5>
-                <h2 class="card-text">15,00 €</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="card">
-              <div class="card-body">
-                <h6 class="card-title">Carteras creadas</h5>
-                <h2 class="card-text">3</h2>
-              </div>
-            </div>
+          <div class="col-3">
+            <h3>Editar perfil</h3>
           </div>
         </div>
-        <div class="row  mt-2">
-          <div class="col-4">
-            <div class="card">
-              <div class="card-body">
-                <h6 class="card-title">Transacciones realizadas</h5>
-                <h2 class="card-text">10</h2>
-              </div>
+        <form action="#" method="post" name="edit-profile">
+          <div class="row mb-3 ">
+            <div class="col-3 offset-2">
+              <label for="username" class="form-label">Nombre</label>
+              <input type="text" name="username" id="username" class="form-control" value="Sofía">
             </div>
           </div>
-          <div class="col-4">
-            <div class="card">
-              <div class="card-body">
-                <h6 class="card-title">Entradas</h5>
-                <h2 class="card-text">5</h2>
-              </div>
+          <div class="row mb-3">
+            <div class="col-4 offset-2">
+              <label for="user-email" class="form-label">Email</label>
+              <input type="email" name="user-email" id="user-email" class="form-control" value="sofia@gmail.com">
+            </div>
+            <div class="col-4">
+              <label for="user-email-confirmation" class="form-label">Confirmación del email</label>
+              <input type="email" name="user-email-confirmation" id="user-email-confirmation" class="form-control">
             </div>
           </div>
-          <div class="col-4">
-            <div class="card">
-              <div class="card-body">
-                <h6 class="card-title">Salidas</h5>
-                <h2 class="card-text">5</h2>
-              </div>
+          <div class="row mb-3 ">
+            <div class="col-4 offset-2">
+              <label for="user-password" class="form-label">Contraseña</label>
+              <input type="password" name="user-password" id="user-password" class="form-control">
+            </div>
+            <div class="col-4">
+              <label for="user-password-confirmation" class="form-label">Confirmación de la contraseña</label>
+              <input type="password" name="user-password-confirmation" id="user-password-confirmation" class="form-control">
             </div>
           </div>
-        </div>
+          <div class="row mb-3  d-flex align-items-center">
+            <div class="col-3 offset-2">
+              <label for="user-avatar" class="form-label">Avatar</label>
+              <select id="user-avatar" name="user-avatar" class="form-select">
+                <option value="" selected>-- Selecciona un avatar --</option>
+                <option value="rabbit" selected>Conejo</option>
+                <option value="panda">Panda</option>
+                <option value="chicken">Pato</option>
+                <option value="dog">Perro</option>
+              </select>
+            </div>
+            <div class="col-1">
+              <img src="/img/avatar/rabbit.png" alt="" id="avatar-preview" class="img-fluid ">
+            </div>
+          </div>
+          <div class="row justify-content-center ">
+            <div class="col-8">
+              <button type="submit" class="btn btn-success w-100">Actualizar</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -143,5 +152,6 @@
   </footer>
   <script src="/vendor/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
   <script src="/js/common.js"></script>
+  <script src="/js/edit-profile.js"></script>
 </body>
 </html>
