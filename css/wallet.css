@@ -1,0 +1,156 @@
+
+
+.icon-parent {
+  position: relative;
+  width: 4rem;
+  height: 7rem;
+  margin-right: 1rem;
+  z-index: -5;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  overflow: hidden;
+
+  svg {
+    position: absolute;
+    transform: scaleX(-1);
+    width: 6rem;
+    left: 1rem;
+    top: 2rem;
+    fill: white;
+  }
+}
+
+#title {
+  .edit, .delete {
+    width: 1.5rem;
+    margin-left: -0.7rem;
+    opacity: 0%;
+    transition: opacity 0.2s ease, margin-left 0.2s ease;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .edit {
+    fill: var(--orange);
+
+    &:hover {
+      fill: var(--subtle-orange);
+    }
+  }
+
+  .delete {
+    fill: var(--red);
+
+    &:hover {
+      fill: var(--subtle-red);
+    }
+  }
+
+  &:hover {
+    .edit, .delete {
+      opacity: 100%;
+      margin-left: 0.7rem;
+    }
+  }
+}
+
+span > svg, button > svg {
+  width: 1rem;
+}
+
+button > svg {
+  vertical-align: initial;
+}
+
+
+#go-back {
+  &:hover {
+    text-decoration: underline !important;
+  }
+
+  svg {
+    width: 1.3rem;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(-5px)
+  }
+}
+
+#transaction-image {
+  max-height: 50%;
+}
+
+.text-success {
+  fill: rgba(var(--bs-success-rgb), 1);
+}
+
+.text-danger {
+  fill: rgba(var(--bs-danger-rgb), 1);
+}
+
+table.transactions {
+  tbody tr {
+    cursor: pointer;
+  }
+
+  td.transaction-name {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+form[name="transaction-actions"] .list-group-horizontal {
+  max-width: none;
+  
+  a {
+    text-decoration: none;
+
+    > svg {
+      width: 1rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  > .list-group-item:not(:last-child) {
+    border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+
+  span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.list-group {
+  width: 100%;
+  max-width: 460px;
+}
+
+.list-group-item-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+
+  &:checked + .list-group-item {
+    color: #fff;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+  }
+
+  &[disabled] + .list-group-item, &:disabled + .list-group-item {
+    pointer-events: none;
+    filter: none;
+    opacity: .5;
+  }
+}
+
+.list-group-checkable .list-group-item {
+  cursor: pointer;
+}

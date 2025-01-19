@@ -1,0 +1,70 @@
+.wallet {
+  transition: transform 0.3s ease;
+
+  & > div {
+    position: relative;
+    overflow: hidden;
+
+    .card-title {
+      width: 80%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+      z-index: 50;
+    }
+
+    .card-body {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    svg {
+      width: 120px; 
+      position: absolute;
+      top: -10%;
+      right: -18%;
+      transform: scaleX(-1);
+      fill: rgb(94, 94, 94);
+      z-index: 0;
+    
+      @media(max-width: 576px) {
+        /* Extra small */
+        right: -25%;
+      }
+    
+      @media(min-width: 576px) {
+        /* Small */
+        right: -16%;
+      }
+    
+      @media(min-width: 768px) {
+        /* Medium */
+        right: -18%;
+      }
+      
+      @media(min-width: 1200px) {
+        /* Extra larg */
+        right: -15%;
+      }
+  
+      @media(min-width: 1400px) {
+        /* Extra extra large */
+        right: -13%;
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05); 
+  } 
+}
+
+.wallet#preview {
+  width: 370.66px;
+
+  #amount-preview::after {
+    content: ' €';
+  }
+}

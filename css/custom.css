@@ -1,0 +1,53 @@
+@import url("/css/colors.css");
+
+.nav-link > .bi {
+  fill: currentColor;
+}
+
+#landing {
+  background-image: url("/img/header-translucid.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+
+  & .form-floating:focus-within {
+    z-index: 2;
+  }
+
+  & input {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & select {
+    border-bottom-left-radius: var(--bs-border-radius);
+      border-bottom-right-radius: var(--bs-border-radius);
+      margin-bottom: 10px;
+  }
+
+  & .form-floating {
+    &:nth-last-of-type(2) > input {
+      border-bottom-left-radius: var(--bs-border-radius);
+      border-bottom-right-radius: var(--bs-border-radius);
+      margin-bottom: 10px;
+    }
+
+    &:nth-of-type(1) > input {
+      border-top-left-radius: var(--bs-border-radius);
+      border-top-right-radius: var(--bs-border-radius);
+    }
+  }
+}
+
+.marks {
+  border: 1px solid red;
+}

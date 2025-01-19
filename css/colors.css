@@ -1,0 +1,94 @@
+:root {
+  --green: #4acf29;
+  --subtle-green: #92e27f;
+  --red: #dd2121;
+  --subtle-red: #eb7a7a;
+  --blue: #212ddd;
+  --subtle-blue: #7a81eb;
+  --orange: #dd9221;
+  --subtle-orange: #ebbe7a;
+}
+
+.wallet-green {
+  border-color: var(--green);
+
+  & > div svg > use { fill: var(--subtle-green) !important; }
+
+  &:hover {
+    background-color: var(--subtle-green);
+    color: white;
+
+    svg {
+      opacity: 100%;
+
+      & > use { fill: white !important; }
+    }
+  }
+}
+
+.wallet-red {
+  border-color: var(--red);
+
+  & > div svg > use { fill: var(--subtle-red) !important; }
+
+  &:hover {
+    background-color: var(--subtle-red);
+    color: white;
+
+    svg {
+      opacity: 100%;
+
+      & > use { fill: white !important; }
+    }
+  }
+}
+
+.wallet-blue {
+  border-color: var(--blue);
+
+  & > div svg > use { fill: var(--subtle-blue) !important; }
+
+  &:hover {
+    background-color: var(--subtle-blue);
+    color: white;
+
+    svg {
+      opacity: 100%;
+
+      & > use { fill: white !important; }
+    }
+  }
+}
+
+.wallet-orange {
+  border-color: var(--orange);
+
+  & > div svg > use { fill: var(--subtle-orange) !important; }
+
+  &:hover {
+    background-color: var(--subtle-orange);
+    color: white;
+
+    svg {
+      opacity: 100%;
+
+      & > use { fill: white !important; }
+    }
+  }
+}
+
+.icon-red {
+  background-color: var(--subtle-red);
+}
+
+.icon-orange {
+  background-color: var(--subtle-orange);
+}
+
+.icon-green {
+  background-color: var(--subtle-green);
+}
+
+.icon-blue {
+  background-color: var(--subtle-blue);
+}
